@@ -12,17 +12,14 @@ public class PrintFiveLetterWords {
         String seussPhrase = "I would not, could not, in a box. I would not, " +
                 "could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
         String[] arrayOfWords = seussPhrase.split(" ");
-        List<String> wordsList = new ArrayList<String>();
-        wordsList = asList(arrayOfWords);
-        //        wordsList.add("yes");
-//        wordsList.add("Frank");
-//
+        ArrayList<String> wordsList = new ArrayList<String>(Arrays.asList(arrayOfWords));
+
         PrintFiveLetterWords output = new PrintFiveLetterWords();
         output.printWords(wordsList);
 
     }
 
-    public void printWords(List<String> listOfWords) {
+    public void printWords(ArrayList<String> listOfWords) {
         for (int i = 0; i < listOfWords.size(); i++) {
             if (listOfWords.get(i).length() == 5) {
                 System.out.println(listOfWords.get(i));
